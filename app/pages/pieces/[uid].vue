@@ -29,7 +29,7 @@ useScoreKeyboardShortcuts({
                 <Heading>
                     {{ `${piece.nr}. ${piece.title}` }}
                     <div class="text-2xl">
-                        {{ `${piece.largerWorkTitle}  Op. ${piece.op}` }}
+                        {{ `${piece.largerWorkTitle},  Op. ${piece.op}` }}
                     </div>
                     <div class="text-base font-normal">
                         {{ piece.composer }}
