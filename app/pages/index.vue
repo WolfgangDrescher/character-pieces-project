@@ -10,7 +10,7 @@ useHead({
     <UContainer>
         <section class="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div>
-                <Heading>character-pieces-project</Heading>
+                <Heading>Character Pieces Project</Heading>
             </div>
         </section>
     </UContainer>
