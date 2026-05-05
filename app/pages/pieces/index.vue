@@ -68,8 +68,8 @@ const { localScoreUrlGenerator, vhvScoreUrlGenerator } = useScoreUrlGenerator();
             </template>
             <template #actions-cell="{ row }">
                 <div class="flex gap-1 justify-end">
-                    <UButton size="sm" color="primary" variant="solid" :label="t('vhv')" :to="vhvScoreUrlGenerator(row.original.slug)" target="_blank" />
-                    <UButton size="sm" color="primary" variant="solid" :label="t('view')" :to="localePath({ name: 'piece-id', params: { id: row.original.slug } })" />
+                    <UButton size="sm" color="primary" variant="solid" :label="t('vhv')" :to="vhvScoreUrlGenerator(row.original.repo, row.original.slug)" target="_blank" />
+                    <UButton size="sm" color="primary" variant="solid" :label="t('view')" :to="localePath({ name: 'pieces-uid', params: { uid: row.original.uid } })" />
                 </div>
             </template>
         </UTable>
