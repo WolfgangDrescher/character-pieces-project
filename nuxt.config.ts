@@ -7,6 +7,13 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
     ],
     css: ['~/assets/css/main.css'],
+    app: {
+        head: {
+            meta: [
+                { name: 'robots', content: process.env.DEPLOY_ENV === 'prod' ? 'all' : 'noindex' },
+            ],
+        },
+    },
     i18n: {
         strategy: 'prefix_except_default',
         locales: [
