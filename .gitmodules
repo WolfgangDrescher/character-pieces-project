@@ -1,0 +1,18 @@
+[submodule "corpus/schumann-kinderszenen"]
+	path = corpus/schumann-kinderszenen
+	url = https://github.com/WolfgangDrescher/schumann-kinderszenen.git
+[submodule "corpus/debussy-childrens-corner"]
+	path = corpus/debussy-childrens-corner
+	url = https://github.com/WolfgangDrescher/debussy-childrens-corner.git
+[submodule "corpus/schumann-album-fuer-die-jugend"]
+	path = corpus/schumann-album-fuer-die-jugend
+	url = https://github.com/WolfgangDrescher/schumann-album-fuer-die-jugend.git
+[submodule "corpus/tchaikovsky-the-seasons"]
+	path = corpus/tchaikovsky-the-seasons
+	url = https://github.com/WolfgangDrescher/tchaikovsky-the-seasons.git
+[submodule "corpus/tchaikovsky-childrens-album"]
+	path = corpus/tchaikovsky-childrens-album
+	url = https://github.com/WolfgangDrescher/tchaikovsky-childrens-album.git
+[submodule "corpus/faure-dolly-suite"]
+	path = corpus/faure-dolly-suite
+	url = https://github.com/WolfgangDrescher/faure-dolly-suite.git
