@@ -54,8 +54,10 @@ execSync(`mkdir -p ${piecesYamlPath}`);
 
 pathToKernScores.forEach(([repo, path]) => {
     getFiles(path).forEach(file => {
-        const id = `${repo}-${getIdFromFilename(file)}`;
-        console.log(`✅ Extract metadata for ${id}`);
+        const slug = getIdFromFilename(file);
+        const uid = `${repo}-${getIdFromFilename(file)}`;
+
+        console.log(`✅ Extract metadata for ${uid}`);
 
         const kern = fs.readFileSync(file, 'utf8');
         const referenceRecords = parseHumdrumReferenceRecords(kern);
@@ -63,11 +65,12 @@ pathToKernScores.forEach(([repo, path]) => {
         const key = kern.match(/\*([a-hA-H][\#\-]*):/)?.[1] ?? null;
         const meter = parseHumdrumTandemInterpretation(kern, /\*M(\d+\/\d+)/);
         const config = Object.assign({
-            pieceId: id,
+            repo,
+            slug,
+            uid,
             title: referenceRecords.OTL || null,
             largerWorkTitle: referenceRecords.OPR || null,
             movementDesignation: [].concat(referenceRecords.OMD || []),
-            urlScan: referenceRecords['URL-scan'] ?? null,
             op: parseInt(referenceRecords.OPS?.replaceAll(/\D/g, '')) || null,
             nr: parseInt(referenceRecords.ONM?.replaceAll(/\D/g, '')) || null,
             largerWorkTitle: referenceRecords.OPR || null,
@@ -77,7 +80,7 @@ pathToKernScores.forEach(([repo, path]) => {
             majorMinor: key === key?.toLowerCase() ? 'minor' : 'major',
         });
 
-        const configFilename = `${id}.yaml`;
+        const configFilename = `${uid}.yaml`;
         fs.writeFileSync(`${piecesYamlPath}${configFilename}`, yaml.dump(config, {
             indent: 4,
             lineWidth: -1,
