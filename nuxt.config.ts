@@ -18,6 +18,14 @@ export default defineNuxtConfig({
             ],
         },
     },
+    vite: {
+        worker: {
+            format: 'es',
+        },
+        optimizeDeps: {
+            exclude: ['verovio'],
+        },
+    },
     i18n: {
         strategy: 'prefix_except_default',
         locales: [
