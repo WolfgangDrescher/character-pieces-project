@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'node:url';
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
@@ -22,5 +24,42 @@ export default defineNuxtConfig({
         ],
         defaultLocale: 'de',
         langDir: 'locales/',
+    },
+    nitro: {
+        routeRules: {
+            '/kern/**': { prerender: false },
+        },
+       publicAssets: [
+            {
+                baseURL: 'kern/schumann-kinderszenen',
+                dir: fileURLToPath(new URL('./schumann-kinderszenen/kern', import.meta.url)),
+                maxAge: 3600,
+            },
+            {
+                baseURL: 'kern/debussy-childrens-corner',
+                dir: fileURLToPath(new URL('./debussy-childrens-corner/kern', import.meta.url)),
+                maxAge: 3600,
+            },
+            {
+                baseURL: 'kern/schumann-album-fuer-die-jugend',
+                dir: fileURLToPath(new URL('./schumann-album-fuer-die-jugend/kern', import.meta.url)),
+                maxAge: 3600,
+            },
+            {
+                baseURL: 'kern/tchaikovsky-the-seasons',
+                dir: fileURLToPath(new URL('./tchaikovsky-the-seasons/kern', import.meta.url)),
+                maxAge: 3600,
+            },
+            {
+                baseURL: 'kern/tchaikovsky-childrens-album',
+                dir: fileURLToPath(new URL('./tchaikovsky-childrens-album/kern', import.meta.url)),
+                maxAge: 3600,
+            },
+            {
+                baseURL: 'kern/faure-dolly-suite',
+                dir: fileURLToPath(new URL('./faure-dolly-suite/kern', import.meta.url)),
+                maxAge: 3600,
+            },
+        ],
     },
 });
