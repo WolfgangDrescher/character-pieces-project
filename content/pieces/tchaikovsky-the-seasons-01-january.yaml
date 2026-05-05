@@ -8,6 +8,7 @@ movementDesignation:
     - Moderato semplice ma espressivo
 nr: 1
 op: 37
-pieceId: tchaikovsky-the-seasons-01-january
+repo: tchaikovsky-the-seasons
+slug: 01-january
 title: January
-urlScan: null
+uid: tchaikovsky-the-seasons-01-january

@@ -8,6 +8,7 @@ movementDesignation:
     - Modérément animé
 nr: 1
 op: null
-pieceId: debussy-childrens-corner-1-doctor-gradus-ad-parnassum
+repo: debussy-childrens-corner
+slug: 1-doctor-gradus-ad-parnassum
 title: Doctor Gradus ad Parnassum
-urlScan: null
+uid: debussy-childrens-corner-1-doctor-gradus-ad-parnassum

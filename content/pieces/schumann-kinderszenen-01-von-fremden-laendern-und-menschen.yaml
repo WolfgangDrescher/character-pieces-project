@@ -7,6 +7,7 @@ meter:
 movementDesignation: []
 nr: 1
 op: 15
-pieceId: schumann-kinderszenen-01-von-fremden-laendern-und-menschen
+repo: schumann-kinderszenen
+slug: 01-von-fremden-laendern-und-menschen
 title: Von fremden Ländern und Menschen
-urlScan: null
+uid: schumann-kinderszenen-01-von-fremden-laendern-und-menschen

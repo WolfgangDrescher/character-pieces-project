@@ -8,6 +8,7 @@ movementDesignation:
     - Allegretto moderato
 nr: 1
 op: 56
-pieceId: faure-dolly-suite-1-berceuse
+repo: faure-dolly-suite
+slug: 1-berceuse
 title: Berceuse
-urlScan: null
+uid: faure-dolly-suite-1-berceuse

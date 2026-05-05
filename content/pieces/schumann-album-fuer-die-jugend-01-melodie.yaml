@@ -7,6 +7,7 @@ meter:
 movementDesignation: []
 nr: 1
 op: 68
-pieceId: schumann-album-fuer-die-jugend-01-melodie
+repo: schumann-album-fuer-die-jugend
+slug: 01-melodie
 title: Melodie
-urlScan: null
+uid: schumann-album-fuer-die-jugend-01-melodie

@@ -8,6 +8,7 @@ movementDesignation:
     - Lento
 nr: 1
 op: 39
-pieceId: tchaikovsky-childrens-album-01-morning-prayer
+repo: tchaikovsky-childrens-album
+slug: 01-morning-prayer
 title: Morning prayer
-urlScan: null
+uid: tchaikovsky-childrens-album-01-morning-prayer
