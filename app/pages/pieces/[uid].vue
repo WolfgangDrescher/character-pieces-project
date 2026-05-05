@@ -1,4 +1,5 @@
 <script setup>
+const localePath = useLocalePath();
 const { params: { uid } } = useRoute();
 const { data: piece } = await useAsyncData(`pieces/${uid}`, () => queryCollection('pieces').where('stem', '=', `pieces/${uid}`).first());
 
@@ -9,7 +10,16 @@ if (!piece.value) {
     });
 }
 
+const { data: surroundData } = await useAsyncDataPiecesCollectionSurroundings(piece.value.path);
+const prevPiece = computed(() => surroundData.value?.[0] ?? null);
+const nextPiece = computed(() => surroundData.value?.[1] ?? null);
+
 const { localScoreUrlGenerator, githubScoreUrlGenerator, vhvScoreUrlGenerator } = useScoreUrlGenerator();
+
+useScoreKeyboardShortcuts({
+    prevPiece,
+    nextPiece,
+});
 </script>
 
 <template>
@@ -25,6 +35,24 @@ const { localScoreUrlGenerator, githubScoreUrlGenerator, vhvScoreUrlGenerator } 
                         {{ piece.composer }}
                     </div>
                 </Heading>
+                <div class="flex gap-2">
+                    <UButton :disabled="!prevPiece" :to="localePath({ name: 'pieces-uid', params: { uid: prevPiece?.uid }, hash: $route.hash })" size="xs">
+                        <template #leading>
+                            <UKbd color="neutral">
+                                <UIcon name="lucide:arrow-left" />
+                            </UKbd>
+                        </template>
+                        {{ $t('previous') }}
+                    </UButton>
+                    <UButton :disabled="!nextPiece" :to="localePath({ name: 'pieces-uid', params: { uid: nextPiece?.uid }, hash: $route.hash })" size="xs">
+                        {{ $t('next') }}
+                        <template #trailing>
+                            <UKbd color="neutral">
+                                <UIcon name="lucide:arrow-right" />
+                            </UKbd>
+                        </template>
+                    </UButton>
+                </div>
             </div>
 
             <div class="flex flex-col md:flex-row items-center gap-4">

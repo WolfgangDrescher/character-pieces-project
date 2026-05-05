@@ -4,7 +4,7 @@ export default defineContentConfig({
     collections: {
         pieces: defineCollection({
             source: 'pieces/**/*.yaml',
-            type: 'data',
+            type: 'page',
             schema: z.object({
                 composer: z.string(),
                 key: z.string(),
