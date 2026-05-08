@@ -16,3 +16,6 @@
 [submodule "corpus/faure-dolly-suite"]
 	path = corpus/faure-dolly-suite
 	url = https://github.com/WolfgangDrescher/faure-dolly-suite.git
+[submodule "corpus/chaminade-album-des-enfants"]
+	path = corpus/chaminade-album-des-enfants
+	url = https://github.com/WolfgangDrescher/chaminade-album-des-enfants.git
