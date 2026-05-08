@@ -72,6 +72,11 @@ export default defineNuxtConfig({
                 dir: fileURLToPath(new URL('./corpus/faure-dolly-suite/kern', import.meta.url)),
                 maxAge: 3600,
             },
+            {
+                baseURL: 'kern/chaminade-album-des-enfants',
+                dir: fileURLToPath(new URL('./corpus/chaminade-album-des-enfants/kern', import.meta.url)),
+                maxAge: 3600,
+            },
         ],
     },
 });
