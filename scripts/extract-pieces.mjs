@@ -14,6 +14,7 @@ const pathToKernScores = [
     'schumann-album-fuer-die-jugend',
     'debussy-childrens-corner',
     'schumann-kinderszenen',
+    'chaminade-album-des-enfants',
 ].map(repo => [repo, join(__dirname, '..', 'corpus', repo, 'kern')]);
 
 const piecesYamlPath = `${__dirname}/../content/pieces/`;
