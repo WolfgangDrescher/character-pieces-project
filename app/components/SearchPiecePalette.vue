@@ -40,12 +40,12 @@ const groups = computed(() => {
     const groupedPieces = Object.groupBy(pieces.value, p => p.repo)
     
     const commandGroups = Object.entries(groupedPieces).map(([key, groupPieces]) => {
-        const { repo, nr, largerWorkTitle, composer } = groupPieces[0]
+        const { repo, largerWorkTitle, composer } = groupPieces[0];
 
         const filteredItems = groupPieces.map(p => {
             const title = p.title?.toLowerCase() !== p.slug?.toLowerCase() ? p.title : '';
             return {
-                label: `${nr}. ${title}`,
+                label: `${p.nr}. ${title}`,
                 value: p.uid,
                 search: `${composer} ${largerWorkTitle} ${p.nr}. ${title} ${p.movementDesignation}`,
                 onSelect: () => {
