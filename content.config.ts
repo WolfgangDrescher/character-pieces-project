@@ -20,5 +20,21 @@ export default defineContentConfig({
                 title: z.string(),
             }),
         }),
+        chords: defineCollection({
+            source: 'chords.yaml',
+            type: 'data',
+            schema: z.object({
+                chords: z.array(z.object({
+                    beat: z.number(),
+                    fb: z.string(),
+                    hint: z.string(),
+                    deg: z.string(),
+                    lineNumber: z.number(),
+                    uid: z.string(),
+                    nextDeg: z.string(),
+                    // meterWeight: z.string(),
+                })),
+            }),
+        }),
     },
 });

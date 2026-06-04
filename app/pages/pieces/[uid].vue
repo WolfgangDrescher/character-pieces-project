@@ -1,6 +1,9 @@
 <script setup>
 const localePath = useLocalePath();
 const { params: { uid } } = useRoute();
+
+const route = useRoute();
+route.params.item
 const { data: piece } = await useAsyncData(`pieces/${uid}`, () => queryCollection('pieces').where('stem', '=', `pieces/${uid}`).first());
 
 if (!piece.value) {
@@ -72,8 +75,8 @@ useScoreKeyboardShortcuts({
 
             <VerovioCanvas
                 :url="localScoreUrlGenerator(piece.repo, piece.slug)"
-                :verovio-options="{
-                    header: true,
+                :options="{
+                    header: 'none',
                     spacingSystem: 15,
                     pageMarginLeft: 50,
                     pageMarginRight: 0,

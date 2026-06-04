@@ -1,0 +1,14 @@
+composer: Tchaikovsky, Pyotr Ilyich
+key: g
+largerWorkTitle: The Seasons
+majorMinor: minor
+meter:
+    - 2/4
+movementDesignation:
+    - Andantino espressivo
+nr: 3
+op: 37
+repo: tchaikovsky-the-seasons
+slug: 03-march
+title: March
+uid: tchaikovsky-the-seasons-03-march

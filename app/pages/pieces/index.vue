@@ -51,7 +51,7 @@ const { localScoreUrlGenerator, vhvScoreUrlGenerator } = useScoreUrlGenerator();
                 </NuxtLink>
             </template>
             <template #title-cell="{ row }">
-                <NuxtLink :to="localePath({ name: 'piece-id', params: { id: row.original.slug } })">
+                <NuxtLink :to="localePath({ name: 'piece-uid', params: { uid: row.original.uid } })">
                     {{ row.original.title ?? '' }}
                 </NuxtLink>
             </template>
