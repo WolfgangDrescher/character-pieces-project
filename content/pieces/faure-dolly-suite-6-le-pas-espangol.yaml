@@ -1,14 +1,14 @@
 composer: Gabriel Fauré
-key: E-
+key: F
 largerWorkTitle: Dolly Suite
 majorMinor: major
 meter:
-    - 3/4
+    - 3/8
 movementDesignation:
-    - Tempo di Valse
-nr: 4
+    - Allegro
+nr: 6
 op: 56
 repo: faure-dolly-suite
-slug: 4-kitty-valse
-title: Kitty Valse
-uid: faure-dolly-suite-4-kitty-valse
+slug: 6-le-pas-espangol
+title: Les pas espangol
+uid: faure-dolly-suite-6-le-pas-espangol
