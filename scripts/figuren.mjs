@@ -42,9 +42,17 @@ pathToKernScores.forEach(([repo, path]) => {
             if (currentMint === '-3' && nextMint === '+2') {
                 console.log('subsumtio', i);
             }
-            // subsumtio
+            // superjectio
             if (currentMint === '+3' && nextMint === '-2') {
                 console.log('superjectio', i);
+            }
+            // Wechselnote abwärts
+            if (currentMint === '+2' && nextMint === '-2') {
+                console.log('Wechselnote abwärts', i);
+            }
+            // Wechselnote aufwärts
+            if (currentMint === '-2' && nextMint === '+2') {
+                console.log('Wechselnote aufwärts', i);
             }
             // todo probleme mit akkorden lösen
             // todo meter weight
